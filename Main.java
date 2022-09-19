@@ -30,20 +30,20 @@ public class Main {
 
             System.out.println("");
 
-            switch(op){
-                case 1:
+            switch(op){ // Menú del programa
+                case 1: // Encriptado del mensaje
                     System.out.print("Message: ");
                     mensaje=sc.nextLine();
                     String mensajeEncriptado=matriz5x5.encriptarMensaje(mensaje);
                     System.out.println("Encrypted Message: "+mensajeEncriptado);
                     break;
-                case 2:
+                case 2: // Desencriptado del mensaje
                     System.out.print("Message: ");
                     mensaje=sc.nextLine();
                     String mensajeDesencriptado=matriz5x5.desencriptarMensaje(mensaje);
                     System.out.println("Decrypted Message: "+mensajeDesencriptado);
                     break;
-                case 3:
+                case 3: // Salida del programa
                     System.out.println("Goodbye.");
                     break;
                 default:

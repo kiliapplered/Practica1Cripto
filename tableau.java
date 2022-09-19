@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class tableau {
-    char[][] matriz;  // Matriz 5x5
+    char[][] matriz;     // Matriz 5x5
     char[] abecedario;   // Abecedario con el que se llena
     char[] clave;        // Palabra clave que define su llenado
 
@@ -13,6 +13,7 @@ public class tableau {
         llenadoTableau();
     }
 
+    // Función que permite el llenado del tableau a partir del alfabeto y la palabra clave
     public void llenadoTableau(){
         List<Character> letrasUsadas = new LinkedList<>();
         int longClave=clave.length;
@@ -45,6 +46,7 @@ public class tableau {
         }
     }
 
+    // Función que permite el encriptado de un mensaje
     public String encriptarMensaje(String mensaje){
         mensaje=mensaje.replaceAll("\\s", "");
         char[] mensajeChar=mensaje.toCharArray();
@@ -70,6 +72,7 @@ public class tableau {
         return mensajeEncriptado;
     }
 
+    // Función que permite el desencriptado de un mensaje
     public String desencriptarMensaje(String mensaje){
         mensaje=mensaje.replaceAll("\\s", "");
         char[] mensajeChar=mensaje.toCharArray();
@@ -88,7 +91,7 @@ public class tableau {
                 }
             }
         }
-        //Una vez que tenemos las filas, se genera el mensaje encriptado
+        //Una vez que tenemos las filas, se genera el mensaje desencriptado
         for(int i=0; i<filas.length/2; i++){
             mensajeDesencriptado+=matriz[filas[i]][filas[(filas.length/2)+i]];
         }
